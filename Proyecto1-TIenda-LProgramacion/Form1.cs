@@ -22,6 +22,7 @@ namespace Proyecto1_TIenda_LProgramacion
         private void Form1_Load(object sender, EventArgs e)
         {
             nuevo.Conect();
+            nuevo.LlenarTabla(dgvTabla);
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Windows.Forms;
+using System.Data;
 
 namespace Proyecto1_TIenda_LProgramacion
 {
@@ -35,13 +36,19 @@ namespace Proyecto1_TIenda_LProgramacion
             }
         }
 
-        public void LlenarTabla()
+        public void LlenarTabla(DataGridView tab)
         {
+            conectar = new OleDbConnection(cadena);
             try
             {
+                conectar.Open();
+                string consulta = "SELECT * FROM Productos";
 
+                adaptador = new OleDbDataAdapter(consulta, conectar);
+                DataTable dataTable = new DataTable();
 
-
+                adaptador.Fill(dataTable);
+                tab.DataSource = dataTable;
 
             }
             catch(Exception error)
