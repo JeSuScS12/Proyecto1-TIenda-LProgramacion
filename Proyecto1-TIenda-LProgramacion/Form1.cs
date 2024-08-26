@@ -23,10 +23,56 @@ namespace Proyecto1_TIenda_LProgramacion
         {
             nuevo.Conect();
             nuevo.LlenarTabla(dgvTabla);
+            nuevo.CargarCombo(cmbCategoria);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
+            string item;
+            item = txtBuscar.Text;
+            nuevo.LlenarTabla3(dgvBusca, item);
+            
+            cmbCatBusca.Text = "";
+            item = "";
+
+            Contar(dgvBusca);
+        }
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {
+            nuevo.CargarCombo(cmbCatBusca);
+        }
+
+        private void cmbCatBusca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string item;
+           
+            item = cmbCatBusca.Text;
+            nuevo.LlenarTabla2(dgvBusca, item);
+            Contar(dgvBusca);
+
+            txtBuscar.Clear();
+        }
+
+        public void Contar(DataGridView tab )
+        {
+            int X = tab.RowCount;
+
+            lblCantPro.Text = $"{X-1} productos encontrados";
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            int cod = Convert.ToInt32(txtCod.Text);
+            string nom = txtNom.Text;
+            string desc = txtDesc.Text;
+            int precio = Convert.ToInt32(txtPrecio.Text);
+            int cant = Convert.ToInt32(txtCant.Text);
+            string categ = cmbCategoria.Text;
+
+            nuevo.CargaProducto(cod, nom, desc, precio, cant, categ);
+            nuevo.LlenarTabla(dgvTabla);
 
         }
     }
