@@ -20,7 +20,7 @@ namespace Proyecto1_TIenda_LProgramacion
 
         public conexion()
         {
-             cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=./Pyt1-Tienda.accdb";
+             cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=./BD/Pyt1-Tienda.accdb";
         }
 
         public void Conect()
