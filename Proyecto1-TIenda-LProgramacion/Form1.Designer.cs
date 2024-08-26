@@ -52,11 +52,15 @@
             this.dgvBusca = new System.Windows.Forms.DataGridView();
             this.txtCod = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbPrecio = new System.Windows.Forms.RadioButton();
+            this.rbStock = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusca)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -207,6 +211,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Controls.Add(this.lblCantPro);
             this.tabPage2.Controls.Add(this.txtBuscar);
             this.tabPage2.Controls.Add(this.label7);
@@ -227,7 +232,7 @@
             this.lblCantPro.AutoSize = true;
             this.lblCantPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantPro.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblCantPro.Location = new System.Drawing.Point(20, 376);
+            this.lblCantPro.Location = new System.Drawing.Point(20, 409);
             this.lblCantPro.Name = "lblCantPro";
             this.lblCantPro.Size = new System.Drawing.Size(0, 16);
             this.lblCantPro.TabIndex = 26;
@@ -235,7 +240,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(780, 135);
+            this.txtBuscar.Location = new System.Drawing.Point(781, 89);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(186, 22);
             this.txtBuscar.TabIndex = 25;
@@ -244,7 +249,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(699, 141);
+            this.label7.Location = new System.Drawing.Point(700, 95);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 16);
             this.label7.TabIndex = 24;
@@ -254,7 +259,7 @@
             // 
             this.cmbCatBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCatBusca.FormattingEnabled = true;
-            this.cmbCatBusca.Location = new System.Drawing.Point(780, 167);
+            this.cmbCatBusca.Location = new System.Drawing.Point(781, 121);
             this.cmbCatBusca.Name = "cmbCatBusca";
             this.cmbCatBusca.Size = new System.Drawing.Size(186, 23);
             this.cmbCatBusca.TabIndex = 23;
@@ -264,7 +269,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(699, 170);
+            this.label6.Location = new System.Drawing.Point(700, 124);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 16);
             this.label6.TabIndex = 22;
@@ -273,7 +278,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(780, 259);
+            this.btnBuscar.Location = new System.Drawing.Point(789, 261);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(112, 83);
             this.btnBuscar.TabIndex = 13;
@@ -284,9 +289,9 @@
             // dgvBusca
             // 
             this.dgvBusca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBusca.Location = new System.Drawing.Point(23, 53);
+            this.dgvBusca.Location = new System.Drawing.Point(23, 33);
             this.dgvBusca.Name = "dgvBusca";
-            this.dgvBusca.Size = new System.Drawing.Size(658, 304);
+            this.dgvBusca.Size = new System.Drawing.Size(658, 357);
             this.dgvBusca.TabIndex = 12;
             // 
             // txtCod
@@ -307,6 +312,41 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Codigo";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbStock);
+            this.groupBox1.Controls.Add(this.rbPrecio);
+            this.groupBox1.Location = new System.Drawing.Point(703, 168);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(264, 64);
+            this.groupBox1.TabIndex = 27;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Ordenar por:";
+            // 
+            // rbPrecio
+            // 
+            this.rbPrecio.AutoSize = true;
+            this.rbPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbPrecio.Location = new System.Drawing.Point(49, 30);
+            this.rbPrecio.Name = "rbPrecio";
+            this.rbPrecio.Size = new System.Drawing.Size(66, 19);
+            this.rbPrecio.TabIndex = 0;
+            this.rbPrecio.TabStop = true;
+            this.rbPrecio.Text = "Precio";
+            this.rbPrecio.UseVisualStyleBackColor = true;
+            // 
+            // rbStock
+            // 
+            this.rbStock.AutoSize = true;
+            this.rbStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbStock.Location = new System.Drawing.Point(149, 30);
+            this.rbStock.Name = "rbStock";
+            this.rbStock.Size = new System.Drawing.Size(60, 19);
+            this.rbStock.TabIndex = 1;
+            this.rbStock.TabStop = true;
+            this.rbStock.Text = "Stock";
+            this.rbStock.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnBuscar;
@@ -326,6 +366,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusca)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -356,6 +398,9 @@
         private System.Windows.Forms.Label lblCantPro;
         private System.Windows.Forms.TextBox txtCod;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbStock;
+        private System.Windows.Forms.RadioButton rbPrecio;
     }
 }
 

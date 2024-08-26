@@ -74,6 +74,13 @@ namespace Proyecto1_TIenda_LProgramacion
             nuevo.CargaProducto(cod, nom, desc, precio, cant, categ);
             nuevo.LlenarTabla(dgvTabla);
 
+            txtCod.Clear();
+            txtNom.Clear();
+            txtCant.Clear();
+            txtDesc.Clear();
+            txtPrecio.Clear();
+            cmbCatBusca.Text = "";
+
         }
     }
 }
