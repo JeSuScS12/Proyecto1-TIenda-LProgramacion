@@ -32,6 +32,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.txtCod = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtCant = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -54,24 +56,23 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvBusca = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCantM = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtDescM = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtCodM = new System.Windows.Forms.TextBox();
+            this.txtPreM = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnBuscaM = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.cmbCatMod = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtNomM = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbCategoria = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.dgvTablaMod = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
@@ -79,7 +80,8 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusca)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTablaMod)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -92,6 +94,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1000, 464);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // tabPage1
@@ -135,6 +138,25 @@
             this.label8.Size = new System.Drawing.Size(57, 16);
             this.label8.TabIndex = 12;
             this.label8.Text = "Codigo";
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(116, 255);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(186, 23);
+            this.cmbCategoria.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(17, 258);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 16);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Categoria";
             // 
             // txtCant
             // 
@@ -350,22 +372,15 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.button1);
-            this.tabPage3.Controls.Add(this.button4);
-            this.tabPage3.Controls.Add(this.button5);
-            this.tabPage3.Controls.Add(this.textBox1);
-            this.tabPage3.Controls.Add(this.label9);
-            this.tabPage3.Controls.Add(this.comboBox1);
+            this.tabPage3.Controls.Add(this.panel1);
+            this.tabPage3.Controls.Add(this.btnEliminar);
+            this.tabPage3.Controls.Add(this.btnBuscaM);
+            this.tabPage3.Controls.Add(this.btnModificar);
+            this.tabPage3.Controls.Add(this.cmbCatMod);
             this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Controls.Add(this.textBox2);
-            this.tabPage3.Controls.Add(this.label11);
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.textBox4);
-            this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.Controls.Add(this.textBox5);
+            this.tabPage3.Controls.Add(this.txtNomM);
             this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Controls.Add(this.dgvTablaMod);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -374,32 +389,134 @@
             this.tabPage3.Text = "Modificar Productos";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // panel1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(114, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 22);
-            this.textBox1.TabIndex = 27;
+            this.panel1.Controls.Add(this.txtCantM);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.txtDescM);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.txtCodM);
+            this.panel1.Controls.Add(this.txtPreM);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Location = new System.Drawing.Point(6, 170);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(313, 190);
+            this.panel1.TabIndex = 31;
+            // 
+            // txtCantM
+            // 
+            this.txtCantM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantM.Location = new System.Drawing.Point(108, 143);
+            this.txtCantM.Name = "txtCantM";
+            this.txtCantM.Size = new System.Drawing.Size(186, 22);
+            this.txtCantM.TabIndex = 23;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(9, 60);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(90, 16);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "Descripcion";
+            // 
+            // txtDescM
+            // 
+            this.txtDescM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescM.Location = new System.Drawing.Point(108, 41);
+            this.txtDescM.Multiline = true;
+            this.txtDescM.Name = "txtDescM";
+            this.txtDescM.Size = new System.Drawing.Size(186, 58);
+            this.txtDescM.TabIndex = 19;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(9, 121);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 16);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Precio";
+            // 
+            // txtCodM
+            // 
+            this.txtCodM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodM.Location = new System.Drawing.Point(108, 13);
+            this.txtCodM.Name = "txtCodM";
+            this.txtCodM.Size = new System.Drawing.Size(186, 22);
+            this.txtCodM.TabIndex = 27;
+            // 
+            // txtPreM
+            // 
+            this.txtPreM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreM.Location = new System.Drawing.Point(108, 115);
+            this.txtPreM.Name = "txtPreM";
+            this.txtPreM.Size = new System.Drawing.Size(186, 22);
+            this.txtPreM.TabIndex = 21;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 96);
+            this.label9.Location = new System.Drawing.Point(9, 19);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 16);
             this.label9.TabIndex = 26;
             this.label9.Text = "Codigo";
             // 
-            // comboBox1
+            // label11
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(114, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(186, 23);
-            this.comboBox1.TabIndex = 25;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(9, 149);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 16);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Cantidad";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(166, 366);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(134, 51);
+            this.btnEliminar.TabIndex = 30;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscaM
+            // 
+            this.btnBuscaM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscaM.Location = new System.Drawing.Point(18, 90);
+            this.btnBuscaM.Name = "btnBuscaM";
+            this.btnBuscaM.Size = new System.Drawing.Size(282, 51);
+            this.btnBuscaM.TabIndex = 29;
+            this.btnBuscaM.Text = "Buscar";
+            this.btnBuscaM.UseVisualStyleBackColor = true;
+            this.btnBuscaM.Click += new System.EventHandler(this.btnBuscaM_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(18, 366);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(134, 51);
+            this.btnModificar.TabIndex = 28;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // cmbCatMod
+            // 
+            this.cmbCatMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCatMod.FormattingEnabled = true;
+            this.cmbCatMod.Location = new System.Drawing.Point(114, 36);
+            this.cmbCatMod.Name = "cmbCatMod";
+            this.cmbCatMod.Size = new System.Drawing.Size(186, 23);
+            this.cmbCatMod.TabIndex = 25;
+            this.cmbCatMod.SelectedIndexChanged += new System.EventHandler(this.cmbCatMod_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -411,135 +528,32 @@
             this.label10.TabIndex = 24;
             this.label10.Text = "Categoria";
             // 
-            // textBox2
+            // txtNomM
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(114, 259);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(186, 22);
-            this.textBox2.TabIndex = 23;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(15, 265);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 16);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "Cantidad";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(114, 231);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(186, 22);
-            this.textBox3.TabIndex = 21;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(15, 237);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 16);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Precio";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(114, 157);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(186, 58);
-            this.textBox4.TabIndex = 19;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(15, 176);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(90, 16);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "Descripcion";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(114, 118);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(186, 22);
-            this.textBox5.TabIndex = 17;
+            this.txtNomM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomM.Location = new System.Drawing.Point(114, 62);
+            this.txtNomM.Name = "txtNomM";
+            this.txtNomM.Size = new System.Drawing.Size(186, 22);
+            this.txtNomM.TabIndex = 17;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(15, 124);
+            this.label14.Location = new System.Drawing.Point(15, 68);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 16);
             this.label14.TabIndex = 16;
             this.label14.Text = "Nombre";
             // 
-            // dataGridView1
+            // dgvTablaMod
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(318, 22);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(658, 395);
-            this.dataGridView1.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 258);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 16);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Categoria";
-            // 
-            // cmbCategoria
-            // 
-            this.cmbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(116, 255);
-            this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(186, 23);
-            this.cmbCategoria.TabIndex = 11;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(166, 287);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 51);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Eliminar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(18, 344);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(282, 51);
-            this.button4.TabIndex = 29;
-            this.button4.Text = "Actualizar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(18, 287);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(134, 51);
-            this.button5.TabIndex = 28;
-            this.button5.Text = "Modificar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.dgvTablaMod.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTablaMod.Location = new System.Drawing.Point(325, 22);
+            this.dgvTablaMod.Name = "dgvTablaMod";
+            this.dgvTablaMod.Size = new System.Drawing.Size(658, 395);
+            this.dgvTablaMod.TabIndex = 14;
+            this.dgvTablaMod.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTablaMod_CellClick);
             // 
             // Form1
             // 
@@ -564,7 +578,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusca)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTablaMod)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -597,24 +613,25 @@
         private System.Windows.Forms.RadioButton rbStock;
         private System.Windows.Forms.RadioButton rbPrecio;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCodM;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCatMod;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCantM;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPreM;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtDescM;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtNomM;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTablaMod;
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnBuscaM;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

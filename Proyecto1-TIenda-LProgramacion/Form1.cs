@@ -82,5 +82,55 @@ namespace Proyecto1_TIenda_LProgramacion
             cmbCatBusca.Text = "";
 
         }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            nuevo.CargarCombo(cmbCatMod);
+        }
+
+        private void cmbCatMod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string itemM;
+
+            itemM = cmbCatMod.Text;
+            nuevo.LlenarTabla2(dgvTablaMod, itemM);
+            Contar(dgvBusca);
+
+            txtBuscar.Clear();
+        }
+
+        private void btnBuscaM_Click(object sender, EventArgs e)
+        {
+            string item;
+            item = txtNomM.Text;
+            nuevo.LlenarTabla3(dgvTablaMod, item);
+
+        }
+
+
+        private void dgvTablaMod_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvTablaMod.CurrentRow != null) // Verifica si hay una fila seleccionada
+            {
+                // Obtener la fila seleccionada actualmente
+                DataGridViewRow fila = dgvTablaMod.CurrentRow;
+
+                // Obtener los valores de las celdas de la fila seleccionada
+                int cod = Convert.ToInt32(fila.Cells["Codigo"].Value); // Cambia "ID" por el nombre de tu columna
+                string nombre = fila.Cells["Nombre"].Value.ToString(); // Cambia "Nombre" por el nombre de tu columna
+                string desc = fila.Cells["Descripcion"].Value.ToString();
+                int precio = Convert.ToInt32(fila.Cells["Precio"].Value); // Cambia "Precio" por el nombre de tu columna
+                int cant = Convert.ToInt32(fila.Cells["Cantidad"].Value);
+                string cat = fila.Cells["Categoria"].Value.ToString();
+
+                // Mostrar los valores en la consola o utilizarlos según sea necesario
+                txtCodM.Text = cod.ToString();
+                txtNomM.Text = nombre;
+                txtDescM.Text = desc;
+                txtPreM.Text = precio.ToString();
+                txtCantM.Text = cant.ToString();
+                cmbCatMod.Text = cat;
+            }
+        }
     }
 }
