@@ -76,7 +76,7 @@ namespace Proyecto1_TIenda_LProgramacion
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Te la devo","😊");
+            MessageBox.Show("Te lo devo","😊");
         }
     }
 }
