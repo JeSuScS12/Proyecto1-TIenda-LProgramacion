@@ -16,7 +16,7 @@ namespace Proyecto1_TIenda_LProgramacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmPrim());
         }
     }
 }

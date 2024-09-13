@@ -20,7 +20,7 @@ namespace Proyecto1_TIenda_LProgramacion
 
         public conexion()
         {
-             cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=./BD/Pyt1-Tienda.accdb";
+             cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=../../BD/Pyt1-Tienda.accdb";
         }
 
         public void Conect()
@@ -29,7 +29,6 @@ namespace Proyecto1_TIenda_LProgramacion
             {
                 conectar = new OleDbConnection(cadena);
                 conectar.Open();
-                MessageBox.Show("Se conecto a BD");
             }
             catch (Exception x)
             {
@@ -58,6 +57,28 @@ namespace Proyecto1_TIenda_LProgramacion
                 MessageBox.Show("Error"+error);
             }
         }
+
+        public void LlenarTablaControlStock(DataGridView tab)
+        {
+            conectar = new OleDbConnection(cadena);
+            try
+            {
+                conectar.Open();
+                string consulta = "SELECT * FROM Inventario where Cantidad <= 20 order by Categoria";
+
+                adaptador = new OleDbDataAdapter(consulta, conectar);
+                DataTable dataTable = new DataTable();
+
+                adaptador.Fill(dataTable);
+                tab.DataSource = dataTable;
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error" + error);
+            }
+        }
+
 
         //Ingresar Productos nuevos a la lista   ---- Por hacer
         public void CargaProducto(int cod, string nom, string desc, int precio,int cant, string categ)
@@ -157,6 +178,68 @@ namespace Proyecto1_TIenda_LProgramacion
                 adaptador.Fill(dataTable);
                 tab.DataSource = dataTable;
 
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error" + error);
+            }
+        }
+
+        //Eliminar
+        public void Eliminar(int aux)
+        {
+            string consulta = $"delete from Inventario  where Codigo = {aux}";  // <--- Cambiar numero
+            conectar = new OleDbConnection(cadena);
+
+            comando = new OleDbCommand(consulta, conectar);
+            try
+            {
+                conectar.Open();
+
+                int result = comando.ExecuteNonQuery();
+                // Comprobar si se Agrego
+                if (result > 0)
+                {
+
+                    MessageBox.Show("¡Articulo Eliminado con éxito!", "Notificacion");
+                    conectar.Close();
+                }
+
+                else
+                {
+                    MessageBox.Show("No se Elimino el Articulo.");
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error" + error);
+            }
+        }
+
+        //Modificar
+        public void Modificar(int cod, string nom, string des, int precio, int stock, string cat, int aux)
+        {
+
+
+            string consulta = $"update Inventario set Codigo = {cod} , Nombre ='{nom}' ,Descripcion='{des}',Precio='{precio}' , Cantidad ={stock} ,Categoria='{cat}'  where Codigo = {aux}";  // <--- Cambiar numero
+            conectar = new OleDbConnection(cadena);
+
+            comando = new OleDbCommand(consulta, conectar);
+            try
+            {
+                conectar.Open();
+
+                int result = comando.ExecuteNonQuery();
+                // Comprobar si se Agrego
+                if (result > 0)
+                {
+                    MessageBox.Show("¡Articulo modificado con éxito!", "Notificacion");
+                    conectar.Close();
+                }
+                else
+                {
+                    MessageBox.Show("No se modifico el Contacto.");
+                }
             }
             catch (Exception error)
             {
